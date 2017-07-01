@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
@@ -16,9 +17,17 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        [HttpGet]
         public ViewResult RsvpForm()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            //ToDo: E-mail response to the party organizer
+            return View("Thanks", guestResponse);
         }
     }
 }
