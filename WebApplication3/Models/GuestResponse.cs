@@ -18,7 +18,7 @@ namespace WebApplication3.Models
         [RegularExpression(@".+\@.+\..+", ErrorMessage = "Please enter a valid e-mail address...")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage ="Please spesify whether you will attend.")]
+        [Required(ErrorMessage =@"Please spesify whether you will attend.")]
         public bool? WillAttend { get; set; }
     }
 }
